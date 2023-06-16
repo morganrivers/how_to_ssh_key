@@ -41,21 +41,11 @@ Before we begin, you will need the following:
    https://github.com/**git_username_or_org**/**repo_name**/settings/keys
 
 6. **Navigate to your local repository directory.**  
-   If the directory does not exist yet, create it and initialize a new Git repository. If it already exists, navigate to it.
+   If the directory does not exist yet on your local machine, clone it with ssh and add any relevant changes:
 
-   *If the repository doesn't exist online yet:*
-   ```
-   $ git init
-   $ echo "# repo_name" >> README.md
-   $ git add README.md
-   $ git commit -m "first commit"
-   $ git branch -M main
-   ```
-
-   *If the repository already exists online:*
    ```
    $ git clone git@github.com:**git_username_or_org**/**repo_name**
-   $ git add * --all
+   $ git add .
    $ git commit -m "your message here"
    ```
 
