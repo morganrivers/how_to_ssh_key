@@ -38,7 +38,7 @@ Before we begin, you will need the following:
    
 5. **Add your SSH key to GitHub.**  
    Paste this into the git website and add the key. It's under "deploy keys". You can also navigate there by going to:
-   <link>https://github.com/<b>git_username_or_org</b>/<b>repo_name</b>/settings/keys</link>
+   <pre>https://github.com/<b>git_username_or_org</b>/<b>repo_name</b>/settings/keys</pre>
 
 6. **Navigate to your local repository directory.**  
    If the directory does not exist yet on your local machine, clone it with ssh and add any relevant changes:
