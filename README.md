@@ -1,6 +1,6 @@
 # Adding SSH Keys on GitHub
 
-This tutorial explains how to add SSH keys on GitHub and the command line, usually for pushing / pulling from a private repo. This is also particularly useful if you've encountered this error:
+This tutorial explains how to add SSH keys on GitHub and the command line with linux and bash, usually for pushing / pulling from a private repo. This is also particularly useful if you've encountered this error:
 
 > remote: Support for password authentication was removed on August 13, 2021.  
 > Please see [this link](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls) for information on currently recommended modes of authentication.
@@ -38,7 +38,7 @@ Before we begin, you will need the following:
    
 5. **Add your SSH key to GitHub.**  
    Paste this into the git website and add the key. It's under "deploy keys". You can also navigate there by going to:
-   https://github.com/<b>git_username_or_org</b>/<b>repo_name</b>/settings/keys
+   <link>https://github.com/<b>git_username_or_org</b>/<b>repo_name</b>/settings/keys</link>
 
 6. **Navigate to your local repository directory.**  
    If the directory does not exist yet on your local machine, clone it with ssh and add any relevant changes:
@@ -61,7 +61,7 @@ In any future terminal sessions you want to use, you'll need to run the followin
 
 <pre>
 $ eval `ssh-agent -s`
-$ ssh-add ~/.ssh/<b>mink_new</b>
+$ ssh-add ~/.ssh/<b>key_name_for_file</b>
 </pre>
 I suggest adding such a set of commands as a function in your ~/.bash_rc file as follows, for easy configuration. You can also add any virtual environment activations for the relevant codebase at the same time in the bashrc function. For example in ~/.bashrc:
 <pre>
