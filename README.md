@@ -1,6 +1,6 @@
 # Adding SSH Keys on GitHub
 
-This tutorial explains how to add SSH keys on GitHub and the command line, particularly useful if you've encountered this error:
+This tutorial explains how to add SSH keys on GitHub and the command line, usually for pushing / pulling from a private repo. This is also particularly useful if you've encountered this error:
 
 > remote: Support for password authentication was removed on August 13, 2021.  
 > Please see [this link](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls) for information on currently recommended modes of authentication.
@@ -54,3 +54,24 @@ Before we begin, you will need the following:
    $ git remote add origin git@github.com:**git_username_or_org**/**repo_name**.git
    $ git push -u origin main
    ```
+
+
+## Pushing / pulling to the repository in the future:
+In any future terminal sessions you want to use, you'll need to run the following commands before a git push or git pull:
+
+```
+$ eval `ssh-agent -s`
+$ ssh-add ~/.ssh/mink_new
+```
+I suggest adding such a set of commands as a function in your ~/.bash_rc file as follows, for easy configuration. You can also add any virtual environment activations for the relevant codebase at the same time in the bashrc function. For example in ~/.bashrc:
+```
+function your_repo_activate(){
+    eval `ssh-agent -s`
+    ssh-add ~/.ssh/key_name_for_file
+    # if you've set up a conda environment with your repository name followed by "_env", you could have something like the line below:
+    # conda activate your_repo_env
+}
+```
+
+
+ 
