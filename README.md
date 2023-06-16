@@ -22,7 +22,7 @@ Before we begin, you will need the following:
    ```
    $ ssh-keygen -t ed25519 -C "**your_email@example.com**"
    ```
-   At the prompt, enter **[key_name_for_file]** and press enter to skip setting a passphrase.
+   At the prompt, enter **key_name_for_file** and press enter to skip setting a passphrase.
 
 3. **Start the SSH agent and add your new key.**
    ```
@@ -32,11 +32,14 @@ Before we begin, you will need the following:
 
 4. **Copy your SSH key to your clipboard.**  
    ```
-   $ cat ~/.ssh/**key_name_for_file**.pub | pbcopy
+   $ cat ~/.ssh/**key_name_for_file**.pub
    ```
-
+   You'll need to copy the result from the terminal. It should be one line, start with ssh-ed25519, and end with your email.
+   
 5. **Add your SSH key to GitHub.**  
-   Navigate to [GitHub's SSH settings](https://github.com/settings/ssh) and click on "New SSH Key". Paste your key into the field and click "Add SSH Key".
+   Paste this into the git website and add the key. It's under "deploy keys"
+   You can also navigate there by going to:
+   https://github.com/**git_username_or_org**/**repo_name**/settings/keys
 
 6. **Navigate to your local repository directory.**  
    If the directory does not exist yet, create it and initialize a new Git repository. If it already exists, navigate to it.
