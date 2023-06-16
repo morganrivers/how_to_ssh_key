@@ -47,7 +47,7 @@ Before we begin, you will need the following:
    *If the repository doesn't exist yet:*
    ```
    $ git init
-   $ echo "# [nice name here]" >> README.md
+   $ echo "# repo_name" >> README.md
    $ git add README.md
    $ git commit -m "first commit"
    $ git branch -M main
