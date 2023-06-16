@@ -37,8 +37,7 @@ Before we begin, you will need the following:
    You'll need to copy the result from the terminal. It should be one line, start with ssh-ed25519, and end with your email.
    
 5. **Add your SSH key to GitHub.**  
-   Paste this into the git website and add the key. It's under "deploy keys"
-   You can also navigate there by going to:
+   Paste this into the git website and add the key. It's under "deploy keys". You can also navigate there by going to:
    https://github.com/**git_username_or_org**/**repo_name**/settings/keys
 
 6. **Navigate to your local repository directory.**  
