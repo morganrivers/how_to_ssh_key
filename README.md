@@ -61,17 +61,17 @@ In any future terminal sessions you want to use, you'll need to run the followin
 
 ```
 $ eval `ssh-agent -s`
-$ ssh-add ~/.ssh/mink_new
+$ ssh-add ~/.ssh/**mink_new**
 ```
 I suggest adding such a set of commands as a function in your ~/.bash_rc file as follows, for easy configuration. You can also add any virtual environment activations for the relevant codebase at the same time in the bashrc function. For example in ~/.bashrc:
-```
+<pre>
 function your_repo_activate(){
     eval `ssh-agent -s`
-    ssh-add ~/.ssh/key_name_for_file
+    ssh-add ~/.ssh/<b>key_name_for_file</b>
     # if you've set up a conda environment with your repository name followed by "_env", you could have something like the line below:
     # conda activate your_repo_env
 }
-```
+</pre>
 
 
  
