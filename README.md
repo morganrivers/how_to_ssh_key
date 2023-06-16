@@ -54,6 +54,7 @@ Before we begin, you will need the following:
 
    *If the repository already exists:*
    ```
+   $ git clone git@github.com:**git_username_or_org**/**repo_name**
    $ git add * --all
    $ git commit -m "your message here"
    ```
