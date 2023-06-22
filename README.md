@@ -20,7 +20,7 @@ Before we begin, you will need the following:
 2. **Generate a new SSH key.**  
    Open a terminal, navigate to your SSH directory by typing
    ```
-   cd ~/.ssh
+   $ cd ~/.ssh
    ```
     and then run:  
    <pre>
