@@ -19,14 +19,20 @@ The `setup_git_repo.sh` script can be run in a Unix-like environment that has gi
 
 Save this script in a file with a .sh extension, for example, `setup_git_repo.sh. Remember to give the file executable permissions before running it with the following command: chmod +x setup_git_repo.sh.
 
+<b>Make sure you're in the directory you want the git repo folder to be created before running the script</b> 
+
 To run the `setup_git_repo.sh` script, you can copy the following commands into your terminal:
 
 ```
-# downloads the script
+# Note: make sure you're in the directory where the repo folder is created will be put before running lines below!
+
+# 1. Download the script
 curl -O https://raw.githubusercontent.com/morganrivers/how_to_ssh_key/main/setup_git_repo.sh
 
-# makes executable, then runs the script to walk you through the step-by-step guide below
+# 2. Make script executable
 chmod +x setup_git_repo.sh
+
+# 3. Run the script to walk you through the step-by-step guide below
 ./setup_git_repo.sh.
 ```
 
