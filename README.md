@@ -18,29 +18,33 @@ Before we begin, you will need the following:
 1. **Create the repository on GitHub.**
 
 2. **Generate a new SSH key.**  
-   Open a terminal, navigate to your SSH directory by typing `cd ~/.ssh`, and run:  
+   Open a terminal, navigate to your SSH directory by typing
+   ```
+   cd ~/.ssh
+   ```
+    and then run:  
    <pre>
    $ ssh-keygen -t ed25519 -C "<b>your_email@example.com</b>"
    </pre>
    At the prompt, enter **key_name_for_file** and press enter to skip setting a passphrase.
 
-3. **Start the SSH agent and add your new key.**
+4. **Start the SSH agent and add your new key.**
    <pre>
    $ eval "$(ssh-agent -s)"
    $ ssh-add ~/.ssh/<b>key_name_for_file</b>
    </pre>
 
-4. **Copy your SSH key to your clipboard.**  
+5. **Copy your SSH key to your clipboard.**  
    <pre>
    $ cat ~/.ssh/<b>key_name_for_file</b>.pub
    </pre>
    You'll need to copy the result from the terminal. It should be one line, start with ssh-ed25519, and end with your email.
    
-5. **Add your SSH key to GitHub.**  
+6. **Add your SSH key to GitHub.**  
    Paste this into the git website and add the key. It's under "deploy keys". You can also navigate there by going to:
    <pre>https://github.com/<b>git_username_or_org</b>/<b>repo_name</b>/settings/keys</pre>
 
-6. **Navigate to your local repository directory.**  
+7. **Navigate to your local repository directory.**  
    If the directory does not exist yet on your local machine, clone it with ssh and add any relevant changes:
 
    <pre>
@@ -49,7 +53,7 @@ Before we begin, you will need the following:
    $ git commit -m "your message here"
    </pre>
 
-7. **Connect your local repository to the remote repository and push your commits.**
+8. **Connect your local repository to the remote repository and push your commits.**
    <pre>
    $ git remote add origin git@github.com:<b>git_username_or_org</b>/<b>repo_name</b>.git
    $ git push -u origin main
