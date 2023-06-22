@@ -22,8 +22,13 @@ read key_name
 echo "Enter your repository name:"
 read repo_name
 
+# newline for readability
+echo ""
+
+
 # Go to .ssh directory
 cd ~/.ssh
+
 
 # Generate a new SSH key
 ssh-keygen -t ed25519 -C "$git_email" -f $key_name -q -N ""
@@ -32,29 +37,43 @@ ssh-keygen -t ed25519 -C "$git_email" -f $key_name -q -N ""
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/$key_name
 
+# newline for readability
+echo ""
+
 # Print the public key
-echo "Your SSH public key is:"
+echo "Your SSH public key is: (Copy the line below!)"
 cat ~/.ssh/$key_name.pub
+
+# newline for readability
+echo ""
 
 echo "Please add the SSH key to your GitHub under 'deploy keys' at this link:"
 echo "https://github.com/$git_username_or_org/$repo_name/settings/keys"
 
 echo "Don't forget to check 'Allow write access'!"
+echo ""
 echo "Once you have added the key, press any key to continue..."
 
 # Wait for user to press a key
 read -n 1 -s
 
-# Change directory
-cd ~
+# Change directory back to where the repo goes
+cd -
 
 # Clone the repository and add any changes
 git clone git@github.com:$git_username_or_org/$repo_name.git
 cd $repo_name
 git add .
+
+# newline for readability
+echo ""
+
 echo "Enter commit message:"
 read commit_msg
 git commit -m "$commit_msg"
+
+# newline for readability
+echo ""
 
 # Connect local repository to the remote one and push commits
 git remote add origin git@github.com:$git_username_or_org/$repo_name.git
