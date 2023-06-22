@@ -12,6 +12,8 @@
 #
 # Usage: Run this script in a Unix-like environment that has git and ssh installed. 
 
+set -e  # Exit immediately if a pipeline returns a non-zero status
+
 # User inputs
 echo "Enter your GitHub username or organization:"
 read git_username_or_org
