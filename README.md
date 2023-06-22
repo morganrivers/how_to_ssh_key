@@ -44,6 +44,9 @@ Before we begin, you will need the following:
    Paste this into the git website and add the key. It's under "deploy keys". You can also navigate there by going to:
    <pre>https://github.com/<b>git_username_or_org</b>/<b>repo_name</b>/settings/keys</pre>
 
+   Title doesn't really matter.
+   Don't forget to select "Allow write access"!
+
 7. **Navigate to your local repository directory.**  
    If the directory does not exist yet on your local machine, clone it with ssh and add any relevant changes:
 
