@@ -23,7 +23,7 @@ To run the `setup_git_repo.sh` script, you can copy the following commands into 
 
 ```
 # downloads the script
-curl -O https://raw.githubusercontent.com/morganrivers/how_to_ssh_key/main/setup_script_repo.sh
+curl -O https://raw.githubusercontent.com/morganrivers/how_to_ssh_key/main/setup_git_repo.sh
 
 # makes executable, then runs the script to walk you through the step-by-step guide below
 chmod +x setup_git_repo.sh
