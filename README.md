@@ -12,6 +12,17 @@ Before we begin, you will need the following:
 2. Your Git email: **your_email@example.com** (replace with your email)
 3. A short name for your SSH key file (to identify it later): **key_name_for_file** (replace with your preferred name relating to the repository)
 4. Your repository name: **repo_name** (replace with your repository name)
+5. Finally, ensure you've gone through the git config commands already. If you're not sure, you can run:
+```
+git config --global user.name
+```
+and
+
+```
+git config --global user.email
+```
+
+These commands will print out the global Git username and email if they have been set. If they haven't been set, they will not return any output.
 
 ## Script Walkthrough (also see below if you prefer the manual step-by-step guide, you'll learn more that way)
 
