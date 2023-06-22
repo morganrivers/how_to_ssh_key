@@ -51,6 +51,7 @@ Before we begin, you will need the following:
    If the directory does not exist yet on your local machine, clone it with ssh and add any relevant changes:
 
    <pre>
+   $ cd ~ # or whatever path you want the git repository to sit in
    $ git clone git@github.com:<b>git_username_or_org</b>/<b>repo_name</b>
    $ git add .
    $ git commit -m "your message here"
