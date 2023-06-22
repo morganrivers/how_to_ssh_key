@@ -13,6 +13,22 @@ Before we begin, you will need the following:
 3. A short name for your SSH key file (to identify it later): **key_name_for_file** (replace with your preferred name relating to the repository)
 4. Your repository name: **repo_name** (replace with your repository name)
 
+## Script Walkthrough (also see below if you prefer the manual step-by-step guide, you'll learn more that way)
+
+The `setup_git_repo.sh` script can be run in a Unix-like environment that has git and ssh installed. It assumes that the main branch of your git repository is called "main". If your default branch has a different name (e.g., "master"), please replace "main" with your branch's name in the last git push command.
+
+Save this script in a file with a .sh extension, for example, `setup_git_repo.sh. Remember to give the file executable permissions before running it with the following command: chmod +x setup_git_repo.sh.
+
+To run the `setup_git_repo.sh` script, you can copy the following commands into your terminal:
+
+```
+# downloads the script
+curl -O https://raw.githubusercontent.com/morganrivers/how_to_ssh_key/main/setup_script_repo.sh
+
+# runs the script to walk you through the step-by-step guide below
+./setup_git_repo.sh.
+```
+
 ## Step-by-Step Guide
 
 1. **Create the repository on GitHub.**
