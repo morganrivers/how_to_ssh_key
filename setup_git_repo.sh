@@ -69,8 +69,8 @@ cd $repo_name
 
 # Check if README.md exists
 if [[ ! -e README.md ]]; then
-    # If not, create it and write $repo_name to it
-    echo "$repo_name" > README.md
+    # If not, create it and write $repo_name to it as the title
+    echo "# $repo_name" > README.md
 fi
 
 git add .
