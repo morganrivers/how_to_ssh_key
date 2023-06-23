@@ -27,6 +27,12 @@ read repo_name
 # newline for readability
 echo ""
 
+# Check if ~/.ssh directory exists
+if [[ ! -d ~/.ssh ]]; then
+    # If not, create it
+    mkdir ~/.ssh
+    echo "Directory ~/.ssh created."
+fi
 
 # Go to .ssh directory
 cd ~/.ssh
