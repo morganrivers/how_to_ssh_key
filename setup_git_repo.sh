@@ -65,6 +65,14 @@ cd -
 # Clone the repository and add any changes
 git clone git@github.com:$git_username_or_org/$repo_name.git
 cd $repo_name
+
+
+# Check if README.md exists
+if [[ ! -e README.md ]]; then
+    # If not, create it and write $repo_name to it
+    echo "$repo_name" > README.md
+fi
+
 git add .
 
 # newline for readability
