@@ -42,7 +42,7 @@ curl -O https://raw.githubusercontent.com/morganrivers/how_to_ssh_key/main/setup
 chmod +x setup_git_repo.sh
 
 # 3. Run the script to walk you through the step-by-step guide below
-./setup_git_repo.sh.
+./setup_git_repo.sh
 ```
 
 ## Step-by-Step Guide
