@@ -28,8 +28,6 @@ These commands will print out the global Git username and email if they have bee
 
 The `setup_git_repo.sh` script can be run in a Unix-like environment that has git and ssh installed. It assumes that the main branch of your git repository is called "main". If your default branch has a different name (e.g., "master"), please replace "main" with your branch's name in the last git push command.
 
-Save this script in a file with a .sh extension, for example, `setup_git_repo.sh. Remember to give the file executable permissions before running it with the following command: chmod +x setup_git_repo.sh.
-
 <b>Make sure you're in the directory you want the git repo folder to be created before running the script</b> 
 
 To run the `setup_git_repo.sh` script, you can copy the following commands into your terminal:
