@@ -68,31 +68,42 @@ read -n 1 -s
 # Change directory back to where the repo goes
 cd -
 
-# Clone the repository and add any changes
-git clone git@github.com:$git_username_or_org/$repo_name.git
-cd $repo_name
-
-
-# Check if README.md exists
-if [[ ! -e README.md ]]; then
-    # If not, create it and write $repo_name to it as the title
-    echo "# $repo_name" > README.md
+# Ask user if they want to clone the repository
+echo "Do you want to clone the repository? (This is not necessary if the directory already exists and you're setting a new SSH key.) [y/n]"
+read response
+response=$(get_response $response)
+if [[ $response == "y" ]]; then
+    git clone git@github.com:$git_username_or_org/$repo_name.git
+    cd $repo_name
 fi
 
-git add .
 
-# newline for readability
-echo ""
+# Ask user if they want to add a readme
+echo "Do you want to add a README.md? [y/n]"
+read response
+response=$(get_response $response)
+if [[ $response == "y" ]]; then
+    # Check if README.md exists
+    if [[ ! -e README.md ]]; then
+        # If not, create it and write $repo_name to it as the title
+        echo "# $repo_name" > README.md
+    fi
+    git add .
+fi
 
-echo "Enter commit message:"
-read commit_msg
-git commit -m "$commit_msg"
+# Ask user if they want to commit and push
+echo "Do you want to commit and push changes? [y/n]"
+read response
+response=$(get_response $response)
+if [[ $response == "y" ]]; then
+    echo "Enter commit message:"
+    read commit_msg
+    git commit -m "$commit_msg"
 
-# newline for readability
-echo ""
+    # newline for readability
+    echo ""
 
-# Connect local repository to the remote one and push commits
-git remote add origin git@github.com:$git_username_or_org/$repo_name.git
-git push -u origin main
-
-echo "Script executed successfully."
+    # Connect local repository to the remote one and push commits
+    git remote add origin git@github.com:$git_username_or_org/$repo_name.git
+    git push -u origin main
+fi
