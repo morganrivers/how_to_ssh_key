@@ -26,10 +26,10 @@ These commands will print out the global Git username and email if they have bee
 
 If they do not return output, then run:
 
-```
-git config --global user.name **git_username_or_org**
-git config --global user.email **your_email@example.com**
-```
+<pre>
+git config --global user.name <b>git_username_or_org</b>
+git config --global user.email <b>your_email@example.com</b>
+</pre>
 
 ## Script Walkthrough (also see below if you prefer the manual step-by-step guide, you'll learn more that way)
 
