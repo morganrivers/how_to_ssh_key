@@ -24,6 +24,11 @@ git config --global user.email
 
 These commands will print out the global Git username and email if they have been set. If they haven't been set, they will not return any output.
 
+If they do not return output, then run:
+
+git config --global user.name **git_username_or_org**
+git config --global user.email **your_email@example.com**
+
 ## Script Walkthrough (also see below if you prefer the manual step-by-step guide, you'll learn more that way)
 
 The `setup_git_repo.sh` script can be run in a Unix-like environment that has git and ssh installed. It assumes that the main branch of your git repository is called "main". If your default branch has a different name (e.g., "master"), please replace "main" with your branch's name in the last git push command.
