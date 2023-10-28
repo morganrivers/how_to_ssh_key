@@ -14,6 +14,17 @@
 
 set -e  # Exit immediately if a pipeline returns a non-zero status
 
+get_response() {
+    local input="$1"
+    input=$(echo "$input" | tr '[:upper:]' '[:lower:]')  # Convert input to lowercase
+
+    if [[ "$input" == "y" ]] || [[ "$input" == "yes" ]]; then
+        echo "y"
+    else
+        echo "n"
+    fi
+}
+
 # User inputs
 echo "Enter your GitHub username or organization:"
 read git_username_or_org
